@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "package": "zip index.mjs",
+    "package": "npm run clean && npm run build && zip -r function.zip .",
+    "clean": "rm -rf function.zip dist",
     "test": "test",
     "init": "tsc --init"
   },

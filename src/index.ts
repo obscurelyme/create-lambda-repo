@@ -17,9 +17,7 @@ export async function handler(event: Payload) {
     auth: env["GH_TOKEN"]
   });
 
-  const response = await client.request(`POST /repos/${event.templateOwner}}/${event.templateRepo}/generate`, {
-    template_owner: event.templateOwner,
-    template_repo: event.templateRepo,
+  const response = await client.request(`POST /repos/${event.templateOwner}/${event.templateRepo}/generate`, {
     owner: event.owner,
     name: event.repositoryName,
     description: event.repositoryDescription,
