@@ -1,0 +1,22 @@
+{
+  "name": "create-lambda-repo",
+  "version": "1.0.0",
+  "description": "Invokes the GitHub Rest API to create a new repository using a provided template",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "package": "zip index.mjs",
+    "test": "test",
+    "init": "tsc --init"
+  },
+  "author": "obscurelyme",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "octokit": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.6",
+    "typescript": "^5.6.3"
+  }
+}
